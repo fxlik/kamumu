@@ -38,7 +38,3 @@ Route::get('/tentang', function(){
 Route::get('/event', function(){
   return view('event');
 });
-
-Route::get('/home', function(){
-  return view('welcome');
-});

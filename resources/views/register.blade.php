@@ -19,8 +19,6 @@
   <link rel="stylesheet" href="{{ asset('/datetimepicker/datepicker.min.css') }}" type="text/css" />
   <link rel="stylesheet" href="{{ asset('/datetimepicker/datepicker3.min.css') }}" type="text/css" />
 
-  <script src="{{ asset('/datetimepicker/bootstrap-datepicker.min.js') }}" type="text/javascript"></script>
-  <script src="https://www.google.com/recaptcha/api.js"></script>
 
   <!-- Custom styles for this template -->
   <link href="{{ asset('/assets/css/navbar-static-top.css') }}" rel="stylesheet" type="text/css" />
@@ -28,6 +26,10 @@
   <script src="{{ asset('/jquery/jquery-1.10.2.min.js') }}" type="text/javascript"></script>
     <!-- bootstrap js--->
   <script src="{{ asset('/js/bootstrap.min.js') }}" type="text/javascript"></script>
+
+  <script src="{{ asset('/datetimepicker/bootstrap-datepicker.min.js') }}" type="text/javascript"></script>
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+
 </head>
 @stop
 
@@ -44,7 +46,7 @@
                   <div class="form-group">
                       <label class="col-lg-3 control-label">Nama Lengkap</label>
                       <div class="col-lg-6">
-                          <input type="text" class="form-control" name="firstName"  />
+                          <input type="text" class="form-control" name="namalengkap"  />
                       </div>
                       <!--<div class="col-lg-4">
                           <input type="text" class="form-control" name="lastName" placeholder="Nama Belakang" />
@@ -177,7 +179,7 @@
                   <div class="form-group">
                       <div class="col-lg-5 col-lg-offset-3">
                           <div class="checkbox">
-                              <input type="checkbox" name="acceptTerms" /> Bersedia mengikuti aturan Hawe?
+                              <input type="checkbox" name="acceptTerms" /> Bersedia mengikuti aturan yang berlaku?
                           </div>
                       </div>
                   </div>
@@ -237,7 +239,7 @@
               validating: 'glyphicon glyphicon-refresh'
           },
           fields: {
-            firstName: {
+            namalengkap: {
                   validators: {
                       notEmpty: {
                           message: 'Nama depan tidak boleh kosong'
