@@ -16,17 +16,20 @@
   <link href="{{ asset('/style/abound.css') }}" rel="stylesheet" type="text/css" />
   <!-- Bootstrap core CSS -->
   <link href="{{ asset('/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="{{ asset('/dist/css/bootstrapValidator.css') }}" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="{{ asset('/datetimepicker/datepicker.min.css') }}" type="text/css" />
   <link rel="stylesheet" href="{{ asset('/datetimepicker/datepicker3.min.css') }}" type="text/css" />
 
 
   <!-- Custom styles for this template -->
-  <link href="{{ asset('/assets/css/navbar-static-top.css') }}" rel="stylesheet" type="text/css" />
+  <!-- <link href="{{ asset('/assets/css/navbar-static-top.css') }}" rel="stylesheet" type="text/css" /> -->
   <!-- jQuery -->
   <script src="{{ asset('/jquery/jquery-1.10.2.min.js') }}" type="text/javascript"></script>
     <!-- bootstrap js--->
   <script src="{{ asset('/js/bootstrap.min.js') }}" type="text/javascript"></script>
-
+  <!-- validator -->
+  <script src="{{ asset('/dist/js/bootstrapValidator.js') }}" type="text/javascript"></script>
+  <!-- datetimepicker -->
   <script src="{{ asset('/datetimepicker/bootstrap-datepicker.min.js') }}" type="text/javascript"></script>
   <script src="https://www.google.com/recaptcha/api.js"></script>
 
@@ -42,7 +45,7 @@
             <h1><strong>Alumni</strong> <small>Registration</small></h1>
           </div>
           <div class="col-lg-8 col-lg-offset-2">
-              <form id="defaultForm" class="form-horizontal" action="#" method="post">
+              <form id="defaultForm" class="form-horizontal" action="" method="post">
                   <div class="form-group">
                       <label class="col-lg-3 control-label">Nama Lengkap</label>
                       <div class="col-lg-6">
@@ -90,7 +93,6 @@
                         <label class="col-lg-3 control-label">Tahun Masuk</label>
                         <div class="col-lg-4">
                             <select class="form-control" name="thmasuk">
-                                <option value="">-- Tahun Masuk --</option>
                                 <option value="id">2003</option>
                                 <option value="id">2004</option>
                                 <option value="id">2005</option>
@@ -109,8 +111,7 @@
                     <div class="form-group">
                         <label class="col-lg-3 control-label">Tahun Keluar</label>
                         <div class="col-lg-4">
-                            <select class="form-control" name="thmasuk" placeholder="tahun lulus">
-
+                            <select class="form-control" name="thkeluar" placeholder="tahun lulus">
                                 <option value="id">2006</option>
                                 <option value="id">2007</option>
                                 <option value="id">2008</option>
@@ -147,7 +148,7 @@
                         <label class="col-lg-3 control-label">Foto</label>
                         <div class="col-lg-4">
                           <span class="btn btn-default btn-file">
-                            <input type="file">
+                            Browse...<input type="file">
                           </span>
                         </div>
                     </div>
@@ -272,24 +273,24 @@
                     }
                 }
             },
-            ages: {
-                validators: {
-                    notEmpty: {
-                      message: 'Berapa usia anda?'
-                  },
-                    lessThan: {
-                        value: 100,
-                        inclusive: true,
-                        message: 'Usia Maksimal 100 tahun'
-                    },
-                    greaterThan: {
-                        value: 10,
-                        inclusive: false,
-                        message: 'Usia Harus diatas 10 tahun'
-                    }
-
-                }
-            },
+            // ages: {
+            //     validators: {
+            //         notEmpty: {
+            //           message: 'Berapa usia anda?'
+            //       },
+            //         lessThan: {
+            //             value: 100,
+            //             inclusive: true,
+            //             message: 'Usia Maksimal 100 tahun'
+            //         },
+            //         greaterThan: {
+            //             value: 10,
+            //             inclusive: false,
+            //             message: 'Usia Harus diatas 10 tahun'
+            //         }
+            //
+            //     }
+            // },
             address: {
               validators: {
                 notEmpty:{
@@ -297,7 +298,14 @@
                 }
               }
             },
-            country: {
+            thmasuk: {
+                validators: {
+                    notEmpty: {
+                        message: 'Pilih asal daerah'
+                    }
+                }
+            },
+            thmasuk: {
                 validators: {
                     notEmpty: {
                         message: 'Pilih asal daerah'
@@ -306,7 +314,6 @@
             },
             phoneNumberUS: {
                 validators: {
-
                     notEmpty: {
                       message: 'Isi nomor HP'
                     },

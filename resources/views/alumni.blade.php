@@ -72,7 +72,7 @@
                   <td>Felik</td>
                   <td>2013</td>
                   <td>2016</td>
-                  <td><strong>Google Indonesia (Amin)</strong></td>
+                  <td><strong>CEO of Felik .inc</strong></td>
                 </tr>
               </tbody>
             </table>

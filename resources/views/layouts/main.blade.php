@@ -63,7 +63,7 @@
                 login
                 </a></li>
                 @else
-                <li><a href="#">{{ Auth::user()->Nama }}</a></li>
+                <li><a href="#">{{ Auth::user()->name}}</a></li>
                 <li><a href="#">Logout</a></li>
                 @endif
             </ul>

@@ -38,3 +38,11 @@ Route::get('/tentang', function(){
 Route::get('/event', function(){
   return view('event');
 });
+
+
+// test_validasi_form
+Route::get('product/create'        , 'ProductController@create');
+Route::post('product/store'        , 'ProductController@store');
+
+Route::get('/auth/facebook', 'Auth\AuthController@redirectToProvider');
+Route::get('/callback', 'Auth\AuthController@handleProviderCallback');
