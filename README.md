@@ -1,8 +1,8 @@
 # kamumu
 Tugas asbw
-website alumni Ti Untan
-fitur:
--akun
--event
--social login
--cerita dan memory..
+<h1>website alumni Ti Untan</h1>
+ul>fitur:
+<li>-akun</li>
+<li>-event</li>
+<li>-social login</li>
+<li>-cerita dan memory..</li>
