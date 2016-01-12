@@ -6,9 +6,9 @@ Tugas asbw
 <li>event</li>
 <li>social login</li>
 <li>cerita dan memory..</li>
-
+<br><br>
 <p>update (12 jan 16):
-<li>bisa login facebook</><br>
+<li>bisa login facebook</>
 <ul>untuk file:
 <li>/.../controllers/ProductControllers.pho</li>
 <li>/.../view/formtest.blade.php</li>
