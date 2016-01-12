@@ -8,9 +8,7 @@ Tugas asbw
 <li>cerita dan memory..</li>
 
 <p>update (12 jan 16):
-<ul>
-<li>bisa login facebook</><
-/ul><br>
+<li>bisa login facebook</><br>
 <ul>untuk file:
 <li>/.../controllers/ProductControllers.pho</li>
 <li>/.../view/formtest.blade.php</li>
