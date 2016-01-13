@@ -71,39 +71,14 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="form-group">
-                        <label class="col-lg-3 control-label">Tempat Lahir</label>
-                        <div class="col-lg-7 text-field">
-                            <input type="text" class="form-control" name="tempatlahir" />
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                      <label class="col-lg-3 control-label">Tanggal lahir</label>
-                      <div class="col-lg-5 date">
-                        <div class="input-group input-append date" id="datePicker">
-                          <input type="text" class="form-control" name="date" />
-                          <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
-                        </div>
-                      </div>
-                    </div>
-
                     <div class="form-group">
                         <label class="col-lg-3 control-label">Tahun Masuk</label>
                         <div class="col-lg-4">
                             <select class="form-control" name="thmasuk">
-                                <option value="id">2003</option>
-                                <option value="id">2004</option>
-                                <option value="id">2005</option>
-                                <option value="id">2006</option>
-                                <option value="id">2007</option>
-                                <option value="id">2008</option>
-                                <option value="id">2009</option>
-                                <option value="id">2010</option>
-                                <option value="id">2011</option>
-                                <option value="id">2013</option>
-                                <option value="id">2014</option>
+                                <option value="" selected="selected">-- Pilih --</option>
+                                @for ($i=1970; $i < 2016; $i++)
+                                <option value="{{ $i }}">{{ $i }}</option>
+                                @endfor
                             </select>
                         </div>
                     </div>
@@ -112,15 +87,10 @@
                         <label class="col-lg-3 control-label">Tahun Keluar</label>
                         <div class="col-lg-4">
                             <select class="form-control" name="thkeluar" placeholder="tahun lulus">
-                                <option value="id">2006</option>
-                                <option value="id">2007</option>
-                                <option value="id">2008</option>
-                                <option value="id">2009</option>
-                                <option value="id">2010</option>
-                                <option value="id">2011</option>
-                                <option value="id">2013</option>
-                                <option value="id">2014</option>
-                                <option value="id">2015</option>
+                                <option value="" selected="selected">-- Pilih --</option>
+                                @for ($i=1970; $i < 2016; $i++)
+                                <option value="{{ $i }}">{{ $i }}</option>
+                                @endfor
                             </select>
                         </div>
                     </div>
@@ -138,8 +108,8 @@
                             <select class="form-control" name="reguler">
                                 <option value="">-- Reguler --</option>
 
-                                <option value="id">Reguler A</option>
-                                <option value="id">Reguler B</option>
+                                <option value="A">Reguler A</option>
+                                <option value="B">Reguler B</option>
                             </select>
                         </div>
                     </div>
@@ -148,7 +118,7 @@
                         <label class="col-lg-3 control-label">Foto</label>
                         <div class="col-lg-4">
                           <span class="btn btn-default btn-file">
-                            Browse...<input type="file">
+                            Browse...<input type="file" name="foto">
                           </span>
                         </div>
                     </div>
