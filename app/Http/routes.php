@@ -39,6 +39,10 @@ Route::get('/event', function(){
   return view('event');
 });
 
+Route::get('/layouts', function(){
+  return view('layouts.main');
+});
+
 // Authentication routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');
@@ -54,3 +58,6 @@ Route::post('product/store'        , 'ProductController@store');
 
 Route::get('/auth/facebook', 'Auth\AuthController@redirectToProvider');
 Route::get('/callback', 'Auth\AuthController@handleProviderCallback');
+
+Route::get('/auth/google', 'Auth\AuthController@redirectToProvider2');
+Route::get('/callback2', 'Auth\AuthController@handleProviderCallback2');

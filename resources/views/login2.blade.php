@@ -61,7 +61,7 @@
                     <p class="or-social">Atau masuk dengan:</p>
 
                     <a href="/auth/facebook" class="btn btn-lg btn-primary btn-block facebook" type="submit">Facebook</a>
-                    <a href="#" class="btn btn-lg btn-danger btn-block google"  type="submit">Google+</a>
+                    <a href="/auth/google" class="btn btn-lg btn-danger btn-block google"  type="submit">Google+</a>
                     <p> <a href="register">Belum terdaftar? Registrasi</a></p>
                   </form>
                   </div>

@@ -48,5 +48,9 @@ return [
     //     'redirect'      => env('GOOGLE_REDIRECT')
     // ]
 
-
+       'google' => [
+       'client_id'     =>'488519174042-4epmmlaq0qvl5f9rt7ef97air3vpaguv.apps.googleusercontent.com',
+       'client_secret' =>'AmUKbMyZobujf8KLHfIrtR9_',
+       'redirect'      =>'http://localhost:8000/callback2',
+    ],
 ];

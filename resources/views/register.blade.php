@@ -45,7 +45,7 @@
             <h1><strong>Alumni</strong> <small>Registration</small></h1>
           </div>
           <div class="col-lg-8 col-lg-offset-2">
-              <form id="defaultForm" class="form-horizontal" action="/auth/register" method="post">
+              <form id="defaultForm" class="form-horizontal" action="/auth/register" method="get">
                   <div class="form-group">
                       <label class="col-lg-3 control-label">Nama Lengkap</label>
                       <div class="col-lg-6">
@@ -61,12 +61,12 @@
                         <div class="col-lg-5">
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="gender" value="male" /> Laki-laki
+                                    <input type="radio" name="gender" value="L" /> Laki-laki
                                 </label>
                             </div>
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="gender" value="female" /> Perempuan
+                                    <input type="radio" name="gender" value="P" /> Perempuan
                                 </label>
                             </div>
                         </div>
@@ -76,7 +76,7 @@
                         <div class="col-lg-4">
                             <select class="form-control" name="thmasuk">
                                 <option value="" selected="selected">-- Pilih --</option>
-                                @for ($i=1970; $i < 2016; $i++)
+                                @for ($i=1970; $i <= 2016; $i++)
                                 <option value="{{ $i }}">{{ $i }}</option>
                                 @endfor
                             </select>
@@ -88,7 +88,7 @@
                         <div class="col-lg-4">
                             <select class="form-control" name="thkeluar" placeholder="tahun lulus">
                                 <option value="" selected="selected">-- Pilih --</option>
-                                @for ($i=1970; $i < 2016; $i++)
+                                @for ($i=1970; $i <= 2016; $i++)
                                 <option value="{{ $i }}">{{ $i }}</option>
                                 @endfor
                             </select>
