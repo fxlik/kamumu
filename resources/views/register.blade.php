@@ -45,7 +45,7 @@
             <h1><strong>Alumni</strong> <small>Registration</small></h1>
           </div>
           <div class="col-lg-8 col-lg-offset-2">
-              <form id="defaultForm" class="form-horizontal" action="" method="post">
+              <form id="defaultForm" class="form-horizontal" action="/auth/register" method="post">
                   <div class="form-group">
                       <label class="col-lg-3 control-label">Nama Lengkap</label>
                       <div class="col-lg-6">

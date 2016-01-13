@@ -44,11 +44,12 @@
                 <div class="panel panel-default" style="width:400px ">
                   <div class="panel-heading"><strong>Login Alumni</strong></div>
                   <div class="panel-body">
-                    <form action="#" class="form-signin">
+                    <form action="/auth/login" class="form-signin">
+                    {!! csrf_field() !!}
                     <label for="inputEmail" class="sr-only">Email address</label>
-                      <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                      <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Email">
                     <label for="inputPassword" class="sr-only">Password</label>
-                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                    <input type="password" class="form-control" id="inputPassword" name="password" placeholder="Password">
                     <div class="checkbox">
                         <label>
                             <label><input type="checkbox" value="1">Tetap login</label>
